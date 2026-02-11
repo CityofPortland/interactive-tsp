@@ -1,5 +1,5 @@
 <template>
-  <li role="button" class="hover:text-blue-900">
+  <li class="hover:text-blue-900">
     <router-link tabindex="0" :to="`#${this.id}`" :class="classes" append>{{ name }}</router-link>
     <ol v-if="depth < maxDepth">
       <text-listing
