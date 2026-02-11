@@ -15,9 +15,9 @@
             classifications
           </span>
         </label>
-        <button class="flex-1 flex flex-col items-end" @click="show = !show">
-          <i v-if="!show" v-html="feather.icons['chevron-down'].toSvg({ class: 'w-5 h-5' })" />
-          <i v-if="show" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" />
+        <button class="flex-1 flex flex-col items-end" @click="show = !show" aria-label="Toggle classification visibility" :aria-expanded="`${show}`">
+          <i v-if="!show" v-html="feather.icons['chevron-down'].toSvg({ class: 'w-5 h-5' })" aria-hidden="true" role="img" alt="" />
+          <i v-if="show" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" aria-hidden="true" role="img" alt="" />
         </button>
       </section>
     </main>
