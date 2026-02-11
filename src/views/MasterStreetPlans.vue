@@ -15,8 +15,8 @@
                 <i v-html="feather.icons['settings'].toSvg({ class: 'w-5 h-5' })" aria-labelledby="settings" role="img" />
                 <span id="settings" class="px-2">Settings</span>
               </h2>
-              <i v-if="!showFilters" v-html="feather.icons['chevron-down'].toSvg({ class: 'w-5 h-5' })" />
-              <i v-if="showFilters" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" />
+              <i v-if="!showFilters" v-html="feather.icons['chevron-down'].toSvg({ class: 'w-5 h-5' })" aria-hidden="true" role="img" alt="" />
+              <i v-if="showFilters" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" aria-hidden="true" role="img" alt="" />
             </button>
           </header>
           <main v-show="showFilters" :aria-expanded="`${showFilters}`" class="p-2">
