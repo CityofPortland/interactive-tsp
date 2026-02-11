@@ -25,7 +25,7 @@
               <i v-if="showFilters" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" />
             </button>
           </header>
-          <main v-show="showFilters" :aria-expanded="showFilters" class="p-2">
+          <div v-show="showFilters" :aria-expanded="showFilters" class="p-2">
             <div v-for="(group, index) in controllableModelGroups" :key="index">
               <classification
                 :group="group"
@@ -38,7 +38,7 @@
                 :total="streets.length"
               ></classification>
             </div>
-          </main>
+          </div>
         </section>
         <section class="my-2">
           <message

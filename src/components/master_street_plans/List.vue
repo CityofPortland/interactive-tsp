@@ -12,7 +12,7 @@
           Master street plan
         </header>
         <h3 class="text-lg">{{ plan.name }}</h3>
-        <main class="text-sm text-gray-700">
+        <div class="text-sm text-gray-700">
           <dl>
             <div class="flex items-center my-1">
               <dt class="mr-2">
@@ -24,7 +24,7 @@
               </dd>
             </div>
           </dl>
-        </main>
+        </div>
       </article>
     </slot>
   </router-link>

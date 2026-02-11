@@ -1,6 +1,6 @@
 <template>
   <section>
-    <main class="my-2 flex flex-col">
+    <div class="my-2 flex flex-col">
       <section class="flex items-center justify-between">
         <label :for="group" class="flex items-center">
           <input
@@ -20,7 +20,7 @@
           <i v-if="show" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" aria-hidden="true" role="img" alt="" />
         </button>
       </section>
-    </main>
+    </div>
     <transition name="pop">
       <footer v-if="show" class="my-2 p-2 bg-fog-100 text-fog-900 border border-fog-900 rounded">
         <label v-for="entry in dataset" :key="entry.value" :for="entry.key" class="flex items-center">
