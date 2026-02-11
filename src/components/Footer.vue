@@ -1,7 +1,6 @@
 <template>
   <footer
     class="flex flex-col md:flex-row flex-wrap items-center justify-center md:justify-between bg-gray-300 text-black p-2 border-black border-t"
-    role="banner"
   >
     <slot name="logos">
       <img
