@@ -12,14 +12,14 @@
           <header :class="{ 'border-b': showFilters }">
             <button class="p-2 w-full flex items-center justify-between" @click="showFilters = !showFilters">
               <h2 class="flex items-center">
-                <i v-html="feather.icons['settings'].toSvg({ class: 'w-5 h-5' })" />
-                <span class="px-2">Settings</span>
+                <i v-html="feather.icons['settings'].toSvg({ class: 'w-5 h-5' })" aria-labelledby="settings" role="img" />
+                <span id="settings" class="px-2">Settings</span>
               </h2>
-              <i v-if="!showFilters" v-html="feather.icons['chevron-down'].toSvg({ class: 'w-5 h-5' })" />
-              <i v-if="showFilters" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" />
+              <i v-if="!showFilters" v-html="feather.icons['chevron-down'].toSvg({ class: 'w-5 h-5' })" aria-hidden="true" role="img" alt="" />
+              <i v-if="showFilters" v-html="feather.icons['chevron-up'].toSvg({ class: 'w-5 h-5' })" aria-hidden="true" role="img" alt="" />
             </button>
           </header>
-          <main v-show="showFilters" :aria-expanded="`${showFilters}`" class="p-2">
+          <div v-show="showFilters" :aria-expanded="`${showFilters}`" class="p-2">
             <form class="grid grid-cols-1 gap-1" @submit.prevent>
               <div>
                 <label class="flex items-center">
@@ -38,7 +38,7 @@
                 </button>
               </div>
             </form>
-          </main>
+          </div>
         </section>
         <ul class="list-none">
           <li v-for="plan in filteredPlans" :key="plan.id">
@@ -54,9 +54,9 @@
             >Back to results</router-link
           >
         </div>
-        <main v-if="selectedPlan">
+        <div v-if="selectedPlan">
           <plan-full :plan="selectedPlan" />
-        </main>
+        </div>
       </section>
     </section>
     <section class="w-full h-screen-50 lg:h-(screen-16)">

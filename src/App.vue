@@ -106,7 +106,7 @@
         <message v-for="alert in alerts" :key="alert.id" :item="alert" />
       </ul>
     </section>
-    <Messages role="notifications" class="z-100 max-w-6xl mx-auto px-2 pb-4 fixed inset-x-0 bottom-0" />
+    <Messages class="z-100 max-w-6xl mx-auto px-2 pb-4 fixed inset-x-0 bottom-0" />
     <router-view />
     <Footer>
       <template>
