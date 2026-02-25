@@ -1,7 +1,6 @@
-FROM node:16
+FROM node:20-bookworm
 RUN apt-get update && \
   apt-get install -yq \
-  gconf-service \
   libasound2 \
   libatk1.0-0 \
   libc6 \
@@ -10,9 +9,8 @@ RUN apt-get update && \
   libdbus-1-3 \
   libexpat1 \
   libfontconfig1 \
-  libgcc1 \
-  libgconf-2-4 \
-  libgdk-pixbuf2.0-0 \
+  libgcc-s1 \
+  libgdk-pixbuf-2.0-0 \
   libglib2.0-0 \
   libgtk-3-0 \
   libnspr4 \
@@ -34,7 +32,6 @@ RUN apt-get update && \
   libxtst6 \
   ca-certificates \
   fonts-liberation \
-  libappindicator1 \
   libnss3 \
   lsb-release \
   xdg-utils \
